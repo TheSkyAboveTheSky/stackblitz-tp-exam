@@ -1,0 +1,80 @@
+<h1>Boutique E-Commerce</h1>
+<div>
+  <a [routerLink]="['/e-commerce/products']">Accès à la boutique</a>
+</div>
+
+<p>
+  Le projet "Boutique E-Commerce" est une boutique en ligne de vente de matériel
+  de sport composé de différentes pages:
+  <br />
+  - une page produits qui liste tous les produits <br />
+  - une page produits details qui liste les détails d'un produit <br />
+  - une page panier qui affiche le panier <br />
+  - une page formulaire qui permet de récupérer les informations de livraison
+  <br />
+  - une page confirmation
+</p>
+
+Vous retrouverez les consignes en haut de chaque page
+
+<mat-divider></mat-divider>
+<h2>Page products</h2>
+<p class="bold">Consignes :</p>
+<ol>
+  <li>Afficher la liste des produits</li>
+  <li>
+    Ajouter un lien sur le titre qui redirige vers la page de détails du produit
+    en passant l'id du produit en paramètre de la route (le composant s'appelle
+    <span class="bold">product-details</span>)
+  </li>
+</ol>
+<mat-divider></mat-divider>
+<h2>Page products details</h2>
+<p class="bold">Consignes :</p>
+<ol>
+  <li>
+    Afficher le produit correspondant à l'ID passé en paramètre de la route et
+    afficher ce produit grâce au template suivant
+  </li>
+  <li>
+    Ajouter l'action d'ajout au panier (pour l'instant le bouton ne fait rien)
+  </li>
+</ol>
+<mat-divider></mat-divider>
+<h2>Page panier</h2>
+<p class="bold">Consignes :</p>
+<ol>
+  <li>Afficher le total</li>
+  <li>Ajouter la suppression du panier</li>
+</ol>
+<mat-divider></mat-divider>
+<h2>Page formualire information livraison</h2>
+<p class="bold">Consignes :</p>
+<ol>
+  <li>
+    Créer un formulaire pour enregister les informations client (voir
+    l'interface order dans le dossier modèle)
+  </li>
+  <li>Ajouter les bons validateurs pour vérifier la qualité des données</li>
+  <li>
+    Ce formulaire devra répondre aux exigences suivantes : <br />a. Affichage
+    des erreurs après que l’utilisateur ait touché ou modifié le champ <br />b.
+    Le bouton de soumission doit être cliquable que si le formulaire est valide
+    <br />c. Lors de la soumission du formulaire : réinitialiser le formulaire
+  </li>
+  <li>
+    Soumission du formulaire : Envoi d'une requête POST au endpoint suivant
+    https://659c7e67633f9aee7907ad5d.mockapi.io/api/order
+    <br />
+    Vider le panier
+  </li>
+</ol>
+<mat-divider></mat-divider>
+<h2>Question Bonus</h2>
+<p class="bold">Consignes :</p>
+<ul>
+  <li>
+    Sauvegarder le panier en session pour pouvoir le garder même si on
+    rafraîchit la page
+  </li>
+</ul>

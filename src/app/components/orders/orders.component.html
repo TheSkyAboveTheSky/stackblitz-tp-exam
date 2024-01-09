@@ -1,0 +1,22 @@
+<p class="bold">Consignes :</p>
+<ul>
+  <li>
+    Afficher la liste des commandes dans la table grâce à une requête HTTP GET
+    au endpoint suivant https://659c7e67633f9aee7907ad5d.mockapi.io/api/order
+  </li>
+</ul>
+<mat-divider></mat-divider>
+
+<h1>Liste des commandes</h1>
+<table>
+  <th>FirstName</th>
+  <th>LastName</th>
+  <th>Total</th>
+  <th>Panier</th>
+  <tr *ngFor="let order of listOrders">
+    <td>{{ order?.userInfo?.firstName }}</td>
+    <td>{{ order?.userInfo?.lastName }}</td>
+    <td *ngIf="order?.cart">{{ order?.cart?.total | currency }}</td>
+    <td *ngIf="order?.cart">{{ order?.cart?.products | json }}</td>
+  </tr>
+</table>

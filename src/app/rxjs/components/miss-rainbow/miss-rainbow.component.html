@@ -1,0 +1,26 @@
+<h1>TP RXJS</h1>
+<p>
+  Miss Rainbow a une commande pour nous. Elle souhaite une voiture de chacune
+  des couleurs
+</p>
+<h3>Véhicules disponibles :</h3>
+<div class="container">
+  <div *ngFor="let el of resultSource">
+    <img src="assets/img/{{ el.color }}-car.jpg" />
+  </div>
+</div>
+
+<h3>Véhicules envoyés :</h3>
+<div class="container">
+  <div *ngFor="let car of cars">
+    <img src="assets/img/{{ car.color }}-car.jpg" />
+  </div>
+</div>
+
+<h3>
+  Satisfaction Client :
+  <span *ngIf="validateConditionClient(); else notValidate">😃</span>
+  <ng-template #notValidate>😡</ng-template>
+</h3>
+
+<div><a [routerLink]="['/rxjs/home']">Acceuil RXJS</a></div>

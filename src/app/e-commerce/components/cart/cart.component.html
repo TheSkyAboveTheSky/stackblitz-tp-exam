@@ -1,0 +1,30 @@
+<p class="bold">Consignes :</p>
+<ol>
+  <li>Afficher le total</li>
+  <li>Ajouter la suppression du panier</li>
+</ol>
+<mat-divider></mat-divider>
+
+<mat-card *ngFor="let productCart of cart">
+  <mat-card-content>
+    - {{ productCart.title }} X{{ productCart.quantity }}
+    {{ productCart.price * productCart.quantity | currency }}
+    <button mat-mini-fab color="primary">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-content>
+</mat-card>
+<div>
+  <h3>Total :</h3>
+</div>
+
+<div *ngIf="cart.length > 0">
+  <button (click)="nextStep()" mat-raised-button color="primary">
+    Commander
+  </button>
+</div>
+
+<mat-divider></mat-divider>
+<div>
+  <a [routerLink]="['/e-commerce/products']">Retour à la liste de produits</a>
+</div>

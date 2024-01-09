@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <button mat-button [routerLink]="['/']">My App</button>
+  <span class="example-spacer"></span>
+  <button
+    mat-mini-fab
+    color="primary"
+    aria-label="Example icon button with a menu icon"
+    [routerLink]="['/e-commerce/cart']"
+  >
+    <mat-icon>shopping_cart</mat-icon>
+    {{ nbItems }}
+  </button>
+</mat-toolbar>
+<router-outlet></router-outlet>

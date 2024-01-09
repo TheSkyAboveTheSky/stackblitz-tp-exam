@@ -1,0 +1,26 @@
+<h1>1) TP RXJS</h1>
+<p>
+  Dabs ce TP, nous sommes fabriquants de voiture et nous fabriquons des voitures
+  pour différents clients. Le but du jeu est de répondre aux besoins de chacun
+  de nos clients (en utilisant les opérateurs RXJS 😉)
+</p>
+<div class="container">
+  <div class="container" *ngFor="let el of resultSource">
+    <img src="assets/img/{{ el.color }}-car.jpg" />
+  </div>
+</div>
+
+<h3>Liste des clients :</h3>
+<ol>
+  <li>
+    <div><a [routerLink]="['/rxjs/ex1']">Mister Red</a></div>
+  </li>
+  <li>
+    <div><a [routerLink]="['/rxjs/ex2']">Miss Rainbow</a></div>
+  </li>
+  <li>
+    <div><a [routerLink]="['/rxjs/ex3']">Mister Jack</a></div>
+  </li>
+</ol>
+
+<div><a [routerLink]="['/']">Tableau de bord</a></div>
